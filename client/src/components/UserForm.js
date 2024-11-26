@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useFormik } from 'formik'
-import * as yup from 'yup'
+// import { useFormik } from 'formik'
+// import * as yup from 'yup'
 
 function UserForm({ workoutId, onAddUser }) {
   const [users, setUsers] = useState([]);
@@ -15,13 +15,13 @@ function UserForm({ workoutId, onAddUser }) {
   }, []);
 
 
-  const initialValues = {
-    name: ""
-  }
+  // const initialValues = {
+  //   name: ""
+  // }
 
-  const validationSchema = yup.object({
-    name: yup.string().min(3).max(50).required()
-  })
+  // const validationSchema = yup.object({
+  //   name: yup.string().min(3).max(50).required()
+  // })
 
 
 
@@ -49,12 +49,12 @@ function UserForm({ workoutId, onAddUser }) {
       }
     });
   }
-  const formik = useFormik({
-    initialValues,
-    validationSchema,
-    onSubmit: handleSubmit,
-    validateOnChange: false
-  })
+  // const formik = useFormik({
+  //   initialValues,
+  //   validationSchema,
+  //   onSubmit: handleSubmit,
+  //   validateOnChange: false
+  // })
 
 
 

@@ -18,9 +18,9 @@ if __name__ == '__main__':
         # This will delete any existing rows
         # so you can run the seed file multiple times without having duplicate entries in your database
         print("Deleting data...")
-        # User.query.delete()
-        # Workout.query.delete()
-        # UserPlan.query.delete()
+        User.query.delete()
+        Workout.query.delete()
+        UserPlan.query.delete()
 
         print("Creating Workouts...")
         workout1 = Workout(name="Squats")
