@@ -1,8 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Route, Switch } from "react-router";
+import Home from "./Home";
+import Navbar from "./Navbar";
+import Workout from "./Workout";
 
 function App() {
-  return <h1>Project Client</h1>;
+  return (
+    <>
+      <Navbar />
+      <Switch>
+        <Route exact path="/workouts/:id">
+          <Workout />
+        </Route>
+        <Route exact path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </>
+  );
 }
 
 export default App;
